@@ -1,4 +1,4 @@
 from game.deck import Dealer
 
-deck = Deck()
-eeck.start_game()
+game = Game()
+game.start_game()
