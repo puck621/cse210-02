@@ -25,8 +25,6 @@ class Game:
             player_count -= 1
 
 
-
-
     def check_play(self, x, y):
         i = random.randint(1,13)
         if self.h_or_l.lower() == 'h':
@@ -48,10 +46,10 @@ class Game:
                 self.players[y].score = self.players[y].score - 75
                 print(f"{self.players[y].name}'s score is {self.players[y].score}")
 
+    # For in loops can be used to iterate over a list
     def start_play(self):
-        y = 0
-        for count in self.players:
-            print(f"\n{self.players[y].name}'s turn")
+        for player in self.players:
+            print(f"\n{player.name}'s turn")
             x = random.randint(1,13)
             print(f"The card is: {x}")
             self.h_or_l = input("Higher or Lower [h/l]: ")
@@ -59,7 +57,7 @@ class Game:
             y+=1
 
     def main(self):
-        self.num_players()
+        # self.num_players()
         self.start_play()
         while True: 
             again = input("Would you like to play again? [y/n]: ")
