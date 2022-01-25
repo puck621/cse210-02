@@ -7,19 +7,27 @@ class Game:
     Game class
 
     attributes:
-    
+        players: string
+        h_or_l: int
+
+    methods:
+        add_player: int
+        start_play: None
     """
     def __init__(self):
         self.players = [self.add_player() for _ in range(int(input("How many players? ")))]
         self.h_or_l = ''
         
     def add_player(self):
+        """
+        Asks players' name and creates list of all players
+        """
         player_name = input("What is player's name: ")
         new_player = Player(player_name,300)
         return new_player
 
-    # End Emmett's Changes
-    # def num_players(self):
+    #Moved to __init__
+    #  def num_players(self):
     #     x = 1
     #     player_count = int(input("How many players? "))
     #     while player_count > 0:
@@ -30,6 +38,7 @@ class Game:
     #         player_count -= 1
 
 
+    #Moved to player.py
     # def check_play(self, x, player):
     #     i = random.randint(1,13)
     #     if (self.h_or_l.lower() == 'h' and x < i) or (self.h_or_l.lower() == 'l' and x > i): 
@@ -44,12 +53,17 @@ class Game:
 
     # For in loops can be used to iterate over a list
     def start_play(self):
+        """
+        Starts each round
+        """
         for player in self.players:
             print(f"\n{player.name}'s turn")
-            # Finley's code
             player.play()
 
     def main(self):
+        """
+        Ask the player if they want to play another round
+        """
         # self.num_players()
         self.start_play()
         while True: 
