@@ -29,7 +29,16 @@ The program must also meet the following requirements.
  - The program must have at least two classes.
  - The program must remain true to game play described in the overview.
  - Have Some Fun
- - Have some fun by enhancing the game any way you like. A few ideas are as follows.
-   - Enhanced input validation.
-   - Enhanced game play and game over messages.
-   - Enhanced game display, e.g. card suits
+ - Have some fun by enhancing the game any way you like. Here are some things included:
+   - Ability to have 1+ players
+   - Player's name as part of input/output messages
+   - Game over messages
+
+Team
+---
+ - Slack group: #group-thursday-5pm
+ - Group met live to work on project. The majority of edits and configuration were done together during this time with one person editing any file at a time (with screenshare) to minimize the need to create and merge branches. 
+ - Lowry Williams: Wrote the comments and explanations throughout the code and collaborated with the program's configuration live.
+ - Finley Grant Jarvis: Wrote out code for the group for game.py and player.py and joined group's configuration live.
+ - Emmett Hart: Led debugging and consolidating classes. Wrote several new functions for classes to ensure attributes were kept to one class each. Worked with configuration live.
+ - Kelsey Scott: Built respository/added collaborators. Built base framework for main, game, and player for classes. Wrote README file and joined configuration live. 
