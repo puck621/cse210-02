@@ -5,10 +5,13 @@ from game.player import Player
 class Game:
     """
     Game class
+    Responsibility of the Game is to keep track of the players names
+    and number of players along with starting each round and
+    asking the players if they would like to continue playing
 
     attributes:
-        players: string
-        h_or_l: int
+        players: string- keeps track of the number of players 
+        h_or_l: int - keeps trak of player's high or low guess
 
     methods:
         add_player: int

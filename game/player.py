@@ -3,11 +3,13 @@ import random
 class Player: 
     """
     Player class
+    The responsibility of Player is to control 
+    the sequence of play and get input from the Player 
 
     attributes:
-        name: string
-        score: int
-        guess: int
+        name: string- name of the current player
+        score: int-score for the round of play
+        guess: int- player's choice of high or low
 
     methods:
         guess: int
