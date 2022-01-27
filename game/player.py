@@ -20,28 +20,26 @@ class Player:
         self.name = name
         self.guess: str = ""
 
-    def guess(self) -> str:
-        """
-        Ask the player for their guess.
-        """
-        return input(f"{self.name}, what is your guess? [h/l]: ")
+    #def guess(self) -> str:
+     #   """
+      #  Ask the player for their guess.
+       # """
+        #return input(f"{self.name}, what is your guess? [h/l]: ")
     
     def play(self):
         """
         Play a round of the game for one player.
         """
         current_card = random.randint(1,13)
-        current_suit = random.randint(1,4)
-        print(f"The current card is: {current_card} {current_suit}")
+        print(f"The current card is: {current_card}")
         new_card = random.randint(1,13)
-        new_suit = random.randint(1,4)
-        h_or_l = self.guess()
+        h_or_l = input(f"{self.name}, what is your guess? [h/l]: ")
         if  h_or_l == 'h' and current_card < new_card or h_or_l == 'l' and current_card > new_card:
             print(f"{self.name}'s guess was correct!")
             self.score += 100
         else:
             print(f"{self.name}'s guess was incorrect!")
             self.score -= 75
-        print(f"The next card is: {new_card} {new_suit}")
+        print(f"The next card is: {new_card}")
         print(f"{self.name}'s score is {self.score}")
         
